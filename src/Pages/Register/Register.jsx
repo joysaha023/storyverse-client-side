@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import useAuth from '../../Hooks/useAuth'
 import registration from './registration.json';
 import Lottie from "lottie-react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+    const {createuser} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const [passwordError, setPasswordError] = useState("");
 
@@ -37,20 +39,16 @@ const Register = () => {
             setPasswordError("add at least one numeric character");
             return;
         }
-        console.log(fullName, email, image, password)
+       
+        
         // create user
-        // createUser(email, password)
-        //   .then((result) => {
-        //     updateUserProfile(fullName, image)
-        //     .then(() => {
-        //       toast.success("Registration Successfully")
-        //       logOut();
-        //       navigate('/login')
-        //     })
-        //   })
-        //   .catch((error) => {
-        //     toast.error("Email is already exist")
-        //   });
+        createuser(email, password)
+          .then((result) => {
+            console.log(result.user)
+          })
+          .catch((error) => {
+            console.log(error)
+          });
       };
 
 

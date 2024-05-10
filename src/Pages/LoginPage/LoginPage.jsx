@@ -4,8 +4,10 @@ import Lottie from "lottie-react";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const LoginPage = () => {
+    const {signIn} = useAuth()
   const [showPassword, setShowPassword] = useState(false);
 
   const {
@@ -15,13 +17,27 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
+  const onSubmit = (data) => {
+    const {email, password} = data;
+   
+    //sign in 
+    signIn(email, password)
+    .then(result => {
+     console.log(result.user)
+    })
+    .catch(error => {
+      
+    })
+
+  };
+
   return (
     <div className="max-w-6xl mx-auto">
       <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
         <div className="lg:w-[50%]"><Lottie animationData={login} /></div>
         <div className="flex flex-col lg:w-[35%] lg:flex-row items-center">
           <form
-            onSubmit={handleSubmit()}
+            onSubmit={handleSubmit(onSubmit)}
             className="card-body rounded-md lg:w-[50%] border"
           >
             <h2 className="text-center text-2xl md:text-3xl font-bold">
