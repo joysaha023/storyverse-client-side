@@ -7,7 +7,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Register = () => {
-    const {createuser} = useAuth();
+    const {createuser, logOut, updateuserProfile} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const [passwordError, setPasswordError] = useState("");
 
@@ -44,7 +44,11 @@ const Register = () => {
         // create user
         createuser(email, password)
           .then((result) => {
-            console.log(result.user)
+            updateuserProfile(fullName, image)
+            .then(() => {
+              logOut()
+              console.log(result.user)
+            })
           })
           .catch((error) => {
             console.log(error)

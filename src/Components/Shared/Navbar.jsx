@@ -109,43 +109,55 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navlink}</ul>
       </div>
       <div className="navbar-end">
-       {user ? (<div className="flex items-center"><button className="btn btn-ghost btn-circle">
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+        {user ? (
+          <div className="flex items-center">
+            <button className="btn btn-ghost btn-circle">
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  title={user?.displayName || "User"}
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt=""
+                      src={user?.photoURL || "https://i.ibb.co/6JyZF0K/user.png"}
+                    />
+                  </div>
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a className="justify-between">
+                    {user?.displayName || "User"}
+                    </a>
+                  </li>
+                  {/* <li>
+                    <a>Settings</a>
+                  </li>
+                  <li>
+                    <a>Logout</a>
+                  </li> */}
+                </ul>
               </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
+            </button>
+            <button onClick={handlelogout} className="btn btn-error">
+              Log Out
+            </button>
           </div>
-        </button>
-        <button onClick={handlelogout} className="btn btn-error">
-          Log Out
-        </button></div>) : (<div><Link to={"/login"} className="btn btn-primary">Login</Link>
- <Link to={"/register"} className="btn btn-accent">Register</Link></div>)}
+        ) : (
+          <div>
+            <Link to={"/login"} className="btn btn-primary">
+              Login
+            </Link>
+            <Link to={"/register"} className="btn btn-accent">
+              Register
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -153,7 +165,13 @@ const Navbar = () => {
 
 export default Navbar;
 
- (<div><Link to={"/login"} className="btn btn-primary">Login</Link>
- <Link to={"/register"} className="btn btn-accent">Register</Link></div>)
+<div>
+  <Link to={"/login"} className="btn btn-primary">
+    Login
+  </Link>
+  <Link to={"/register"} className="btn btn-accent">
+    Register
+  </Link>
+</div>;
 
 // <button onClick={handlelogout} className="btn btn-error">Log Out</button>
