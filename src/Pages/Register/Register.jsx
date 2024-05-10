@@ -4,12 +4,14 @@ import useAuth from '../../Hooks/useAuth'
 import registration from './registration.json';
 import Lottie from "lottie-react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
     const {createuser, logOut, updateuserProfile} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const [passwordError, setPasswordError] = useState("");
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -48,6 +50,7 @@ const Register = () => {
             .then(() => {
               logOut()
               console.log(result.user)
+              navigate('/login')
             })
           })
           .catch((error) => {
