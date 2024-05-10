@@ -7,15 +7,14 @@ import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const LoginPage = () => {
-    const {signIn} = useAuth()
+    const {signIn, googleSignIn} = useAuth()
   const [showPassword, setShowPassword] = useState(false);
-
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm();
+
 
   const onSubmit = (data) => {
     const {email, password} = data;
@@ -28,8 +27,15 @@ const LoginPage = () => {
     .catch(error => {
       
     })
-
   };
+
+  const handlegoogle = () => {
+    googleSignIn()
+    .then(result => {
+        console.log(result.user)
+    })
+    .catch()
+  }
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -99,19 +105,13 @@ const LoginPage = () => {
             <p className="text-center mt-2 font-medium">Or Login with</p>
             <div className="flex justify-between">
               <button
-                //   onClick={handlegoogle}
+                  onClick={handlegoogle}
                 className="flex items-center gap-1 text-[#38B2AC] btn btn-sm rounded-none"
               >
                 <FaGoogle />
                 Google
               </button>
-              <button
-                //   onClick={handleGithub}
-                className="flex items-center gap-1 text-[#38B2AC] btn btn-sm rounded-none"
-              >
-                <FaGithub />
-                Github
-              </button>
+              
             </div>
           </form>
         </div>
