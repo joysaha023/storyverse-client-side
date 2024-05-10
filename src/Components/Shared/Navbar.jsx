@@ -24,7 +24,7 @@ const Navbar = () => {
               {navlink}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">StoryVerse</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -32,7 +32,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn btn-primary">Login</a>
+          <a className="btn btn-accent">Button</a>
         </div>
       </div>
     );
