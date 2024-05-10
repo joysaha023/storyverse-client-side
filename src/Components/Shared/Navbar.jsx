@@ -103,7 +103,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <Link to={"/login"} className="btn btn-primary">Login</Link>
-        <Link to={"/register"} className="btn btn-accent">Button</Link>
+        <Link to={"/register"} className="btn btn-accent">Register</Link>
       </div>
     </div>
   );

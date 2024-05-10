@@ -76,7 +76,7 @@ const LoginPage = () => {
             </div>
             <h2 className="text-center mt-2 font-medium">
               Not a Member Yet?{" "}
-              <Link to={"/signup"} className="text-[#38B2AC] underline">
+              <Link to={"/register"} className="text-[#38B2AC] underline">
                 Sign Up
               </Link>
             </h2>
