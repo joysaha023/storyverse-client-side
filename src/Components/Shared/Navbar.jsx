@@ -71,6 +71,18 @@ const Navbar = () => {
           Add Blog
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to={"/myblog"}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              : "font-medium"
+          }
+        >
+         My Blogs
+        </NavLink>
+      </li>
     </>
   );
 
