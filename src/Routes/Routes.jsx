@@ -12,6 +12,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import BlogSingleCard from "../Components/BlogSingleCard/BlogSingleCard";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 import MyBlog from "../Pages/MyBlog/MyBlog";
+import UpdateBlog from "../Pages/UpdateBlog/UpdateBlog";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         {
           path: "/myblog",
           element: <MyBlog></MyBlog>
+        },
+        {
+          path: "/updateblog/:email",
+          element: <UpdateBlog></UpdateBlog>
         }
     ]
   },
