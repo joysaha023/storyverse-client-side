@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BlogSingleCard = ({item}) => {
     const {_id, title, image_url, category, short_description} = item
@@ -18,7 +19,7 @@ const BlogSingleCard = ({item}) => {
           <p>{short_description}</p>
           <div className="card-actions items-center justify-between">
             <button className="btn btn-accent btn-sm rounded-2xl">WishList</button>
-            <button className="btn btn-primary btn-sm rounded-2xl">Read More</button>
+            <Link to={`/BlogDetails/${_id}`} className="btn btn-primary btn-sm rounded-2xl">Read More</Link>
           </div>
         </div>
       </div>
