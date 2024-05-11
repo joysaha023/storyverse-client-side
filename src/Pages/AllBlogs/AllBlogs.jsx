@@ -22,7 +22,7 @@ const AllBlogs = () => {
   const { isPending, data: users } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/filter-blog");
+      const res = await fetch("http://localhost:5000/blogposts");
       return res.json();
     },
   });
