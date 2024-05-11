@@ -18,7 +18,7 @@ const MyblogCard = ({data}) => {
           <span>{category}</span>
           <p>{short_description}</p>
           <div className="card-actions items-center justify-between">
-            <Link to={`/updateblog/${email}`} className="btn btn-primary btn-sm rounded-2xl">Update</Link>
+            <Link to={`/updateblog/${_id}`} className="btn btn-primary btn-sm rounded-2xl">Update</Link>
             <button  className="btn btn-error btn-sm rounded-2xl">Delete</button>
           </div>
         </div>
