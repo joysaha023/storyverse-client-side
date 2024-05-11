@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { json, useParams } from "react-router-dom";
 
 import useAuth from "../../Hooks/useAuth";
 
@@ -7,7 +7,7 @@ const UpdateBlog = () => {
   const { user } = useAuth();
   const { id } = useParams();
   const [update, setUpdate] = useState({});
-  console.log(id);
+
   useEffect(() => {
     fetch(`http://localhost:5000/updateblog/${id}`)
       .then((res) => res.json())
@@ -17,17 +17,43 @@ const UpdateBlog = () => {
   }, [id]);
 
   const handleUpdate = (e) => {
-    
-  }
+    e.preventDefault();
+    const form = e.target;
+    const title = form.title.value;
+    const image_url = form.image.value;
+    const category = form.subcategory_name.value;
+    const short_description = form.sdescription.value;
+    const long_description = form.ldescription.value;
+    const email = form.email.value;
+    const name = form.name.value;
+    const updateBlog = {
+      title,
+      image_url,
+      category,
+      short_description,
+      long_description,
+      email,
+      name,
+    };
+    console.log(updateBlog);
 
-
+    fetch(`http://localhost:5000/updateChanges/${id}`, {
+        method: "PUT",
+        headers: { "content-type": "application/json"},
+        body:JSON.stringify(updateBlog)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
+  };
 
   return (
     <div className="max-w-6xl mx-auto">
       <h2>Update blog</h2>
       <div>
         <div>
-          <form onClick={handleUpdate} className="card-body border rounded-md">
+          <form onSubmit={handleUpdate} className="card-body border rounded-md">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Title</span>

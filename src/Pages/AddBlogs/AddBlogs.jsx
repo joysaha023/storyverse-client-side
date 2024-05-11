@@ -15,7 +15,7 @@ const AddBlogs = () => {
         const email = form.email.value;
         const name = form.name.value;
         const sendBlog = {title, image_url, category, short_description, long_description, email, name}
-        console.log(sendBlog)
+
 
         fetch("http://localhost:5000/blogposts", {
             method: "POST",
