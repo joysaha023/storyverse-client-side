@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const MyblogCard = ({data}) => {
+
+const MyblogCard = ({data, handleDelete}) => {
+
     const {_id, title, image_url, email, category, short_description} = data
+
+
+   
+
 
     return (
         <div>
@@ -19,7 +25,7 @@ const MyblogCard = ({data}) => {
           <p>{short_description}</p>
           <div className="card-actions items-center justify-between">
             <Link to={`/updateblog/${_id}`} className="btn btn-primary btn-sm rounded-2xl">Update</Link>
-            <button  className="btn btn-error btn-sm rounded-2xl">Delete</button>
+            <button onClick={() => handleDelete(_id)} className="btn btn-error btn-sm rounded-2xl">Delete</button>
           </div>
         </div>
       </div>
