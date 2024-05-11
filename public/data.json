@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Inception",
+        "image_url": "https://i.ibb.co/G07vDr5/hjg.jpg",
+        "category": "Science Fiction",
+        "short_description": "A mind-bending journey into the world of dreams.",
+        "long_description": "Inception is a 2010 science fiction action film written and directed by Christopher Nolan. The story follows a professional thief who steals information by infiltrating the subconscious, and his final mission to plant an idea into the mind of a CEO using dream-sharing technology.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "The Shawshank Redemption",
+        "image_url": "https://i.ibb.co/HCG1Mhq/sfgsd00000.jpg",
+        "category": "Drama",
+        "short_description": "Hope prevails in the darkest of places.",
+        "long_description": "The Shawshank Redemption is a 1994 drama film directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. It tells the story of Andy Dufresne, a banker who is sentenced to life in Shawshank State Penitentiary for the murder of his wife and her lover, despite his claims of innocence.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "The Dark Knight",
+        "image_url": "https://i.ibb.co/7tzFyp4/popopop009.jpg",
+        "category": "Action",
+        "short_description": "Gotham's protector faces his greatest challenge.",
+        "long_description": "The Dark Knight is a 2008 superhero film directed, produced, and co-written by Christopher Nolan. It is the second installment of Nolan's Batman film series and stars Christian Bale as Bruce Wayne / Batman, alongside Heath Ledger as the Joker. The film follows Batman's struggle against the Joker, who aims to plunge Gotham City into anarchy.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "Forrest Gump",
+        "image_url": "https://i.ibb.co/4mvTBv9/y667.jpg",
+        "category": "Drama",
+        "short_description": "Life is like a box of chocolates.",
+        "long_description": "Forrest Gump is a 1994 American comedy-drama film directed by Robert Zemeckis and written by Eric Roth. It is based on the 1986 novel of the same name by Winston Groom and stars Tom Hanks as the title character, a man with a low IQ who witnesses and unwittingly influences several defining historical events in the 20th century United States.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "Pulp Fiction",
+        "image_url": "https://i.ibb.co/23DV0Y4/p998.jpg",
+        "category": "Crime",
+        "short_description": "A collage of crime and redemption in Los Angeles.",
+        "long_description": "Pulp Fiction is a 1994 crime film written and directed by Quentin Tarantino. It is known for its eclectic dialogue, ironic mix of humor and violence, nonlinear storyline, and a host of cinematic allusions and pop culture references. The film's narrative weaves through multiple interconnected stories involving mobsters, a boxer, a gangster's wife, and two hitmen.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "The Godfather",
+        "image_url": "https://i.ibb.co/VTN3yG8/gop09.jpg",
+        "category": "Crime",
+        "short_description": "An offer you can't refuse.",
+        "long_description": "The Godfather is a 1972 crime film directed by Francis Ford Coppola and produced by Albert S. Ruddy, based on the 1969 novel by Mario Puzo. It stars Marlon Brando and Al Pacino as the leaders of a fictional New York crime family. The story spans ten years from 1945 to 1955 and chronicles the Corleone family's rise to power and the transfer of control from the patriarch to his reluctant son.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "Avatar",
+        "image_url": "https://i.ibb.co/dmrFSYQ/av65.jpg",
+        "category": "Science Fiction",
+        "short_description": "Discover the wonders of Pandora.",
+        "long_description": "Avatar is a 2009 American science fiction film directed, written, produced, and co-edited by James Cameron. The film is set in the mid-22nd century when humans are colonizing Pandora, a lush habitable moon of a gas giant in the Alpha Centauri star system, in order to mine the valuable mineral unobtanium.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "image_url": "https://i.ibb.co/7zJBLSV/yuy666.jpg",
+        "category": "Fantasy",
+        "short_description": "The epic conclusion to the trilogy.",
+        "long_description": "The Lord of the Rings: The Return of the King is a 2003 epic fantasy film directed by Peter Jackson, based on the third volume of J. R. R. Tolkien's The Lord of the Rings. It is the final installment in The Lord of the Rings trilogy and follows Frodo Baggins as he and the Fellowship continue their quest to destroy the One Ring and defeat the Dark Lord Sauron.",
+        "name": "Emma Smith",
+        "email": "emma@example.com",
+        "profile_pic": "https://i.ibb.co/0nNHnNq/opopopo.jpg"
+    },
+]

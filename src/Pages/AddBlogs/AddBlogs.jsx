@@ -13,8 +13,9 @@ const AddBlogs = () => {
         const short_description = form.sdescription.value;
         const long_description = form.ldescription.value;
         const email = form.email.value;
+        const profile_pic = form.ownerPhoto.value;
         const name = form.name.value;
-        const sendBlog = {title, image_url, category, short_description, long_description, email, name}
+        const sendBlog = {title, image_url, category, profile_pic, short_description, long_description, email, name}
 
 
         fetch("http://localhost:5000/blogposts", {
@@ -89,6 +90,18 @@ const AddBlogs = () => {
               <span className="label-text">Long Description</span>
             </label>
             <textarea className="textarea textarea-bordered" name="ldescription" placeholder="Long Description"></textarea>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Owner Photo</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Photo URL"
+              name="ownerPhoto"
+              className="input input-bordered"
+              required
+            />
           </div>
           <div className="form-control">
             <label className="label">
