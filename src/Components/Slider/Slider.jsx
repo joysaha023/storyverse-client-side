@@ -32,27 +32,40 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="slide h-[40vh] md:h-[80vh] slide1"><div className="overlay-box flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">Comic Strip Drawing</h2>
-            
-            </div></div>
+          <div className="slide h-[40vh] md:h-[80vh] slide1">
+            <div className="overlay-box flex flex-col items-center justify-center">
+              <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">
+                Avengers: Endgame
+              </h2>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide h-[40vh] md:h-[80vh] slide2"><div className="overlay-box flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">Pencil Sketch Portrait</h2>
-            </div></div>
+          <div className="slide h-[40vh] md:h-[80vh] slide2">
+            <div className="overlay-box flex flex-col items-center justify-center">
+              <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">
+                Avatar: The Way of Water
+              </h2>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide h-[40vh] md:h-[80vh] slide3"><div className="overlay-box flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">Realistic Oil Portrait</h2>
-          
-            </div></div>
+          <div className="slide h-[40vh] md:h-[80vh] slide3">
+            <div className="overlay-box flex flex-col items-center justify-center">
+              <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">
+                Forrest Gump
+              </h2>
+            </div>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide h-[40vh] md:h-[80vh] slide4"><div className="overlay-box flex flex-col items-center justify-center">
-            <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">Mountain view canvas</h2>
-           
-            </div></div>
+          <div className="slide h-[40vh] md:h-[80vh] slide4">
+            <div className="overlay-box flex flex-col items-center justify-center">
+              <h2 className="text-2xl md:text-5xl mb-4 md:mb-10 font-bold">
+                The Godfather
+              </h2>
+            </div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </>
