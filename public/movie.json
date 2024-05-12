@@ -1,0 +1,106 @@
+[
+    {
+      "director": "James Cameron",
+      "title": "Avatar",
+      "image": "https://i.ibb.co/4FVKwqC/m1.jpg",
+      "rating": 7.8,
+      "category": ["Action", "Adventure", "Fantasy"],
+      "year": 2009
+    },
+    {
+      "director": "James Cameron",
+      "title": "Titanic",
+      "image": "https://i.ibb.co/MCySbLM/m2.jpg",
+      "rating": 7.8,
+      "category": ["Drama", "Romance"],
+      "year": 1997
+    },
+    {
+      "director": "James Cameron",
+      "title": "Terminator 2: Judgment Day",
+      "image": "https://i.ibb.co/KxXpP5d/m3.jpg",
+      "rating": 8.5,
+      "category": ["Action", "Sci-Fi"],
+      "year": 1991
+    },
+    {
+        "director": "Joss Whedon",
+        "title": "The Avengers",
+        "image": "https://i.ibb.co/Smg1Kpr/m4.jpg",
+        "rating": 8.0,
+        "category": ["Action", "Adventure", "Sci-Fi"],
+        "year": 2012
+      },
+      {
+        "director": "Joss Whedon",
+        "title": "Avengers: Age of Ultron",
+        "image": "https://i.ibb.co/rvxwTff/m5.jpg",
+        "rating": 7.3,
+        "category": ["Action", "Adventure", "Sci-Fi"],
+        "year": 2015
+      },
+      {
+        "director": "Christopher Nolan",
+        "title": "Inception",
+        "image": "https://i.ibb.co/XWtxPkw/m6.jpg",
+        "rating": 8.8,
+        "category": ["Action", "Adventure", "Sci-Fi"],
+        "year": 2010
+      },
+      {
+        "director": "Christopher Nolan",
+        "title": "The Dark Knight",
+        "image": "https://i.ibb.co/LPCYfyf/m7.jpg",
+        "rating": 9.0,
+        "category": ["Action", "Crime", "Drama"],
+        "year": 2008
+      },
+      {
+        "director": "Ridley Scott",
+        "title": "Alien",
+        "image": "https://i.ibb.co/9pprtNK/m8.jpg",
+        "rating": 8.4,
+        "category": ["Horror", "Sci-Fi"],
+        "year": 1979
+      },
+      {
+        "director": "Ridley Scott",
+        "title": "Blade Runner",
+        "image": "https://i.ibb.co/Cn1SLZ9/m9.jpg",
+        "rating": 8.1,
+        "category": ["Action", "Sci-Fi", "Thriller"],
+        "year": 1982
+      },
+      {
+        "director": "Martin Scorsese",
+        "title": "Goodfellas",
+        "image": "https://i.ibb.co/gTxf22t/m10.jpg",
+        "rating": 8.7,
+        "category": ["Biography", "Crime", "Drama"],
+        "year": 1990
+      },
+      {
+        "director": "Martin Scorsese",
+        "title": "The Departed",
+        "image": "https://i.ibb.co/s2djqHy/m11.jpg",
+        "rating": 8.5,
+        "category": ["Crime", "Drama", "Thriller"],
+        "year": 2006
+      },
+      {
+        "director": "Steven Spielberg",
+        "title": "Jurassic Park",
+        "image": "https://i.ibb.co/0sLmCyP/m12.jpg",
+        "rating": 8.1,
+        "category": ["Adventure", "Sci-Fi"],
+        "year": 1993
+      },
+      {
+        "director": "Steven Spielberg",
+        "title": "Schindler's List",
+        "image": "https://i.ibb.co/myspjBW/m13.jpg",
+        "rating": 8.9,
+        "category": ["Biography", "Drama", "History"],
+        "year": 1993
+      }
+]
