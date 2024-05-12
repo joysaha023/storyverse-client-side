@@ -41,7 +41,10 @@ const FanReview = () => {
           <SeeAllReview key={item._id} item={item}></SeeAllReview>
         ))}
       </div>
-      <div className="my-6 text-right">
+      <div className="my-6 flex justify-end gap-3">
+        <Link to={"/writereview"} className="btn btn-accent">
+          Write Review
+        </Link>
         <Link to={"/allreviews"} className="btn btn-accent">
           See All Review
         </Link>

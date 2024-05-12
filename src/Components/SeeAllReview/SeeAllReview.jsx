@@ -4,7 +4,7 @@ const SeeAllReview = ({ item }) => {
   const { name, image, review, rating } = item;
   return (
     <div>
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="card w-full h-full bg-base-100 shadow-xl">
         <div className="card-body items-center text-center">
           <div className="avatar">
             <div className="w-24 rounded-full">
