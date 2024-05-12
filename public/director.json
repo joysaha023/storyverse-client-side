@@ -1,0 +1,32 @@
+[
+    {
+      "name": "James Cameron",
+      "image": "https://i.ibb.co/gRNjvFf/d11.jpg",
+      "oscars_won": 3
+    },
+    {
+      "name": "Joss Whedon",
+      "image": "https://i.ibb.co/JCRChr4/d20.jpg",
+      "oscars_won": 0
+    },
+    {
+      "name": "Christopher Nolan",
+      "image": "https://i.ibb.co/4fv7CR8/d3.jpg",
+      "oscars_won": 0
+    },
+    {
+      "name": "Ridley Scott",
+      "image": "https://i.ibb.co/NtTj4Hr/d4.jpg",
+      "oscars_won": 2
+    },
+    {
+      "name": "Martin Scorsese",
+      "image": "https://i.ibb.co/X5PPx2f/d50.jpg",
+      "oscars_won": 1
+    },
+    {
+      "name": "Steven Spielberg",
+      "image": "https://i.ibb.co/vqXrCcG/d6.webp",
+      "oscars_won": 3
+    }
+  ]
