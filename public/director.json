@@ -1,32 +1,32 @@
 [
-    {
-      "name": "James Cameron",
-      "image": "https://i.ibb.co/gRNjvFf/d11.jpg",
-      "oscars_won": 3
-    },
-    {
-      "name": "Joss Whedon",
-      "image": "https://i.ibb.co/JCRChr4/d20.jpg",
-      "oscars_won": 0
-    },
-    {
-      "name": "Christopher Nolan",
-      "image": "https://i.ibb.co/4fv7CR8/d3.jpg",
-      "oscars_won": 0
-    },
-    {
-      "name": "Ridley Scott",
-      "image": "https://i.ibb.co/NtTj4Hr/d4.jpg",
-      "oscars_won": 2
-    },
-    {
-      "name": "Martin Scorsese",
-      "image": "https://i.ibb.co/X5PPx2f/d50.jpg",
-      "oscars_won": 1
-    },
-    {
-      "name": "Steven Spielberg",
-      "image": "https://i.ibb.co/vqXrCcG/d6.webp",
-      "oscars_won": 3
-    }
-  ]
+  {
+    "name": "John Doe",
+    "image": "https://i.ibb.co/RpG93P1/w222.jpg",
+    "review": "Great content! I always find interesting articles on this blog.",
+    "rating": 5
+  },
+  {
+    "name": "Jane Smith",
+    "image": "https://i.ibb.co/qrsDW3q/w11.jpg",
+    "review": "The blog design is user-friendly and the articles are informative.",
+    "rating": 4
+  },
+  {
+    "name": "David Brown",
+    "image": "https://i.ibb.co/f02zwSc/w33.jpg",
+    "review": "I enjoy reading the blog posts, but sometimes the loading time is a bit slow.",
+    "rating": 3
+  },
+  {
+    "name": "Emily Johnson",
+    "image": "https://i.ibb.co/YZVfP02/w55.jpg",
+    "review": "The content quality varies, but overall it's a good resource.",
+    "rating": 4
+  },
+  {
+    "name": "Sophia Lee",
+    "image": "https://i.ibb.co/wCP84sM/agent-44.jpg",
+    "review": "Decent blog with some useful information, but could be improved.",
+    "rating": 3.5
+  }
+]
