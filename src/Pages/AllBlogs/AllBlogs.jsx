@@ -28,10 +28,16 @@ const AllBlogs = () => {
 
   const handleSearch = e => {
     e.preventDefault()
-
+    
     setSearch(searchText)
+    // setSearch(searchText)
   }
 
+  const handleReset = () => {
+    setFilter('')
+    setSearch('')
+    setSearchText('')
+  }
 
 
   // const { isPending, data: users } = useQuery({
@@ -88,6 +94,9 @@ const AllBlogs = () => {
             </div>
           </form>
         </div>
+        <button onClick={handleReset} className='btn'>
+            Reset
+          </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
         {data.map((item) => (
