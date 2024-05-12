@@ -15,7 +15,7 @@ useEffect(()=> {
         setItems(data)
     })
 }, [user])
-console.log()
+
 
 const handleDelete = (id) => {
     Swal.fire({

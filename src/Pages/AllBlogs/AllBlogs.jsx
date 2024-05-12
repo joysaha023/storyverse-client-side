@@ -4,36 +4,51 @@ import BlogSingleCard from "../../Components/BlogSingleCard/BlogSingleCard";
 import axios from "axios";
 
 const AllBlogs = () => {
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState('');
+  const [search, setSearch] = useState('')
+  const [searchText, setSearchText] = useState('')
   const [data, setData] = useState([]);
 
-//   useEffect(() => {
-//     const getData = async () => {
-//         const {item} = await axios(
-//             `http://localhost:5000/filter-blog?filter=${filter}`
-//         )
-//         setData(item)
-//     }
-//     getData()
-//   }, [filter])
-// console.log(data)
+  useEffect(() => {
+    fetch(`http://localhost:5000/filter-blog?filter=${filter}&search=${search}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, [filter, search]);
 
 
-  const { isPending, data: users } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      const res = await fetch("http://localhost:5000/blogposts");
-      return res.json();
-    },
-  });
+  useEffect(() => {
+    fetch(`http://localhost:5000/blogposts`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
 
-  if (isPending) {
-    return (
-      <div className="text-center mt-20">
-        <span className="loading  loading-spinner loading-lg"></span>
-      </div>
-    );
+  const handleSearch = e => {
+    e.preventDefault()
+
+    setSearch(searchText)
   }
+
+
+
+  // const { isPending, data: users } = useQuery({
+  //   queryKey: ["users"],
+  //   queryFn: async () => {
+  //     const res = await fetch("http://localhost:5000/blogposts");
+  //     return res.json();
+  //   },
+  // });
+
+  // if (isPending) {
+  //   return (
+  //     <div className="text-center mt-20">
+  //       <span className="loading  loading-spinner loading-lg"></span>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -46,7 +61,7 @@ const AllBlogs = () => {
             name="category"
             id="category"
           >
-            <option value="">Select Category</option>
+            <option value=''>Select Category</option>
             <option value="Science Fiction">Science Fiction</option>
             <option value="Drama">Drama</option>
             <option value="Action">Action</option>
@@ -54,24 +69,28 @@ const AllBlogs = () => {
             <option value="Fantasy">Fantasy</option>
           </select>
         </div>
-        <label className="input input-bordered flex items-center gap-2">
-          <input type="text" className="grow" placeholder="Search" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className="w-4 h-4 opacity-70"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </label>
+        <div>
+        <form onSubmit={handleSearch}>
+            <div className='flex p-1 overflow-hidden border rounded-lg    focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300'>
+              <input
+                className='px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent'
+                type='text'
+                onChange={e => setSearchText(e.target.value)}
+                value={searchText}
+                name='search'
+                placeholder='Enter Job Title'
+                aria-label='Enter Job Title'
+              />
+
+              <button className='px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none'>
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
-        {users.map((item) => (
+        {data.map((item) => (
           <BlogSingleCard key={item._id} item={item}></BlogSingleCard>
         ))}
       </div>
