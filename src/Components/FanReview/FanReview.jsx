@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React, { useEffect, useState } from "react";
+import SeeAllReview from "../SeeAllReview/SeeAllReview";
+import { Link } from "react-router-dom";
 
 const FanReview = () => {
   const [data, setData] = useState([]);
@@ -9,7 +11,6 @@ const FanReview = () => {
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
- 
 
   // const {isPending, data: users} = useQuery({
   //     queryKey: ['users'],
@@ -35,10 +36,15 @@ const FanReview = () => {
           enjoy read blog
         </p>
       </div>
-      <div>
-        {
-            
-        }
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {data.slice(0, 3).map((item) => (
+          <SeeAllReview key={item._id} item={item}></SeeAllReview>
+        ))}
+      </div>
+      <div className="my-6 text-right">
+        <Link to={"/allreviews"} className="btn btn-accent">
+          See All Review
+        </Link>
       </div>
     </div>
   );
