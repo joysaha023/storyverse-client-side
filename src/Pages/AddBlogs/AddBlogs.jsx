@@ -1,8 +1,11 @@
 import React from "react";
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddBlogs = () => {
     const {user} = useAuth();
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,6 +30,12 @@ const AddBlogs = () => {
         })
         .then((res) => res.json())
         .then((data) => {
+          Swal.fire({
+            title: "Successfully Added",
+            text: "Your item has been added.",
+            icon: "success",
+          });
+          navigate("/myblog")
             console.log(data)
         })
     }

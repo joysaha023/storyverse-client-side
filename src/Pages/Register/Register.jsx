@@ -5,6 +5,7 @@ import registration from './registration.json';
 import Lottie from "lottie-react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
     const {createuser, logOut, updateuserProfile} = useAuth();
@@ -49,12 +50,12 @@ const Register = () => {
             updateuserProfile(fullName, image)
             .then(() => {
               logOut()
-              console.log(result.user)
+              toast.success("Registration Successfully")
               navigate('/login')
             })
           })
           .catch((error) => {
-            console.log(error)
+            toast.error("Email is already exist")
           });
       };
 

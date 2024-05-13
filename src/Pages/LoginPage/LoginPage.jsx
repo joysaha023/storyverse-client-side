@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
     const {signIn, googleSignIn} = useAuth()
@@ -25,10 +26,11 @@ const LoginPage = () => {
     signIn(email, password)
     .then(result => {
      console.log(result.user)
+     toast.success("Login Successfully")
      navigate(location?.state ? location.state: '/');
     })
     .catch(error => {
-      
+      toast.warning("incorrect password")
     })
   };
 
@@ -36,6 +38,7 @@ const LoginPage = () => {
     googleSignIn()
     .then(result => {
         console.log(result.user)
+        toast.success("Login Successfully")
         navigate(location?.state ? location.state: '/');
     })
     .catch()

@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const WriteReview = () => {
+  const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -20,6 +23,12 @@ const WriteReview = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        Swal.fire({
+          title: "Successfully Submitted",
+          text: "Your review has been submitted.",
+          icon: "success",
+        });
+        navigate("/allreviews")
         console.log(data);
       });
   };

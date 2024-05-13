@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { json, useParams } from "react-router-dom";
+import { json, useNavigate, useParams } from "react-router-dom";
 
 import useAuth from "../../Hooks/useAuth";
+import Swal from "sweetalert2";
 
 const UpdateBlog = () => {
   const { user } = useAuth();
+  const navigate = useNavigate()
   const { id } = useParams();
   const [update, setUpdate] = useState({});
 
@@ -38,14 +40,20 @@ const UpdateBlog = () => {
     console.log(updateBlog);
 
     fetch(`http://localhost:5000/updateChanges/${id}`, {
-        method: "PUT",
-        headers: { "content-type": "application/json"},
-        body:JSON.stringify(updateBlog)
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(updateBlog),
     })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
+      .then((res) => res.json())
+      .then((data) => {
+        Swal.fire({
+          title: "Update Changes",
+          text: "Your item has been updated.",
+          icon: "success",
+        });
+        navigate("/myblog");
+        console.log(data);
+      });
   };
 
   return (
@@ -53,7 +61,10 @@ const UpdateBlog = () => {
       <h2>Update blog</h2>
       <div>
         <div>
-          <form onSubmit={handleUpdate} className="card-body bg-[#ECF0F1] border rounded-md">
+          <form
+            onSubmit={handleUpdate}
+            className="card-body bg-[#ECF0F1] border rounded-md"
+          >
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Title</span>
@@ -144,7 +155,9 @@ const UpdateBlog = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#3498DB] text-white hover:text-black">Update Changes</button>
+              <button className="btn bg-[#3498DB] text-white hover:text-black">
+                Update Changes
+              </button>
             </div>
           </form>
         </div>
