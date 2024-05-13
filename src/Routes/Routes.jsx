@@ -15,7 +15,7 @@ import MyBlog from "../Pages/MyBlog/MyBlog";
 import UpdateBlog from "../Pages/UpdateBlog/UpdateBlog";
 import MovieData from "../Pages/MovieData/MovieData";
 import AllReviews from "../Pages/AllReviews/AllReviews";
-
+import WriteReview from "../Pages/WriteReview/WriteReview";
 
 const router = createBrowserRouter([
   {
@@ -71,7 +71,10 @@ const router = createBrowserRouter([
           path: "/allreviews",
           element: <AllReviews></AllReviews>
         },
-       
+        {
+          path: "/writereview",
+          element: <PrivateRoutes><WriteReview></WriteReview></PrivateRoutes>
+        }
     ]
   },
 ]);
