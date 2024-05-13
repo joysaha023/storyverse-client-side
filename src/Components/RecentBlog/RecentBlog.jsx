@@ -26,13 +26,13 @@ const RecentBlog = () => {
                 <h2 className='text-4xl font-bold'>Recent Blogs</h2>
                 <p>This is where you can get a recent blog which is added by recently from our users. and these blogs are most popular movies data. you can enjoy read blog</p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className='grid grid-cols-1 p-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     users.slice(0, 6).map(item => <BlogSingleCard key={item._id} item={item}></BlogSingleCard>)
                 }
             </div>
             <div className='my-6 text-center'>
-                <Link to={"/allblogs"} className='btn rounded-xl bg-[#2C3E50] text-white hover:text-black'>All Blogs</Link>
+                <Link to={"/allblogs"} className='btn rounded-xl bg-[#2C3E50] btn-md text-white hover:text-black'>All Blogs</Link>
             </div>
         </div>
     );

@@ -36,16 +36,16 @@ const FanReview = () => {
           enjoy read blog
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-3 gap-5">
         {data.slice(0, 3).map((item) => (
           <SeeAllReview key={item._id} item={item}></SeeAllReview>
         ))}
       </div>
       <div className="my-6 flex justify-end gap-3">
-        <Link to={"/writereview"} className="btn btn-accent">
+        <Link to={"/writereview"} className="btn btn-sm md:btn-md rounded-xl bg-[#2C3E50] text-white hover:text-black">
           Write Review
         </Link>
-        <Link to={"/allreviews"} className="btn btn-accent">
+        <Link to={"/allreviews"} className="btn btn-sm md:btn-md rounded-xl bg-[#3498DB] text-white hover:text-black">
           See All Review
         </Link>
       </div>
