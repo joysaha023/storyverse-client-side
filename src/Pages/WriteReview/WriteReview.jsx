@@ -1,14 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../../Hooks/useAuth";
 
 const WriteReview = () => {
-  const navigate = useNavigate()
+  const {user} = useAuth();
+  const navigate = useNavigate();
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
-    const image = form.image.value;
+    const name = user?.displayName;
+    const image = user?.photoURL;
     const rating = form.rating.value;
     const review = form.sdescription.value;
     const writereview = { name, image, rating, review };
@@ -46,13 +51,13 @@ const WriteReview = () => {
           </label>
           <input
             type="text"
-            placeholder="Name"
+            defaultValue={user?.displayName}
             name="name"
             className="input input-bordered"
-            required
+            readOnly
           />
         </div>
-        <div className="form-control">
+        {/* <div className="form-control">
           <label className="label">
             <span className="label-text">User Photo</span>
           </label>
@@ -63,7 +68,7 @@ const WriteReview = () => {
             className="input input-bordered"
             required
           />
-        </div>
+        </div> */}
         <div className="form-control">
           <label className="label">
             <span className="label-text">Rating</span>

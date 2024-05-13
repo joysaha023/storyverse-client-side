@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import CardComments from "../../Components/CardComments/CardComments";
 import useAuth from "../../Hooks/useAuth";
 
@@ -9,6 +9,7 @@ const BlogDetails = () => {
   const [item, setItems] = useState({});
   const [comments, setComments] = useState([]);
   const { id } = useParams();
+  
 
   useEffect(() => {
     fetch(`http://localhost:5000/blogdetails/${id}`)
@@ -22,7 +23,7 @@ const BlogDetails = () => {
     fetch(`http://localhost:5000/comments/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setComments(data);
+        setControl(!control);
       });
   }, [id]);
 
@@ -48,6 +49,7 @@ const BlogDetails = () => {
   .then((res) => res.json())
   .then((data) => {
       console.log(data)
+      
   })
   }
   

@@ -1,6 +1,18 @@
 import React from "react";
+import Swal from "sweetalert2";
 
 const Newslatter = () => {
+
+
+  const handleSub = () => {
+    
+    Swal.fire({
+      title: "Thank You for Subscribe",
+      text: "Your will get news on gmail.",
+      icon: "success",
+    });
+  }
+
   return (
     <div className="max-w-6xl mx-auto">
       <div className=" px-2">
@@ -10,11 +22,11 @@ const Newslatter = () => {
         
         <label className="flex flex-col md:flex-row items-center mt-8 w-full md:w-2/5 mx-auto gap-2">
           <input
-            type="text"
+            type="email"
             placeholder="write email here"
             className="input input-bordered rounded-xl  w-full max-w-xs"
           />
-          <button className="btn rounded-xl text-white hover:text-black bg-[#3498DB]">
+          <button onClick={handleSub} className="btn rounded-xl text-white hover:text-black bg-[#3498DB]">
             Subscribe
           </button>
         </label>
