@@ -21,10 +21,9 @@ const RecentBlog = () => {
 
 
     return (
-        <div className='max-w-6xl mx-auto'>
-            <div className='my-10'>
-                <h2 className='text-4xl font-bold'>Recent Blogs</h2>
-                <p>This is where you can get a recent blog which is added by recently from our users. and these blogs are most popular movies data. you can enjoy read blog</p>
+        <div className='max-w-6xl mx-auto '>
+            <div className=' my-4 md:my-10'>
+                <h2 className='text-2xl md:text-4xl p-2 font-bold'>Recent <span className='text-[#3498DB]'>Blogs</span> </h2>
             </div>
             <div className='grid grid-cols-1 p-2 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {

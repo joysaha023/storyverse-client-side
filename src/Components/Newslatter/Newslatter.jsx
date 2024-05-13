@@ -16,8 +16,8 @@ const Newslatter = () => {
   return (
     <div className="max-w-6xl mx-auto">
       <div className=" px-2">
-        <h1 className=" text-center font-bold text-4xl ">
-          Subscribe to our <span className="">Newsletter</span>
+        <h1 className=" text-center font-bold text-xl md:text-4xl ">
+          Subscribe to  <span className="text-[#3498DB]">Newsletter</span>
         </h1>
         
         <label className="flex flex-col md:flex-row items-center mt-8 w-full md:w-2/5 mx-auto gap-2">
