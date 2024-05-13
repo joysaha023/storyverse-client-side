@@ -24,8 +24,8 @@ const MyblogCard = ({data, handleDelete}) => {
           <span>{category}</span>
           <p>{short_description}</p>
           <div className="card-actions items-center justify-between">
-            <Link to={`/updateblog/${_id}`} className="btn btn-primary btn-sm rounded-2xl">Update</Link>
-            <button onClick={() => handleDelete(_id)} className="btn btn-error btn-sm rounded-2xl">Delete</button>
+            <Link to={`/updateblog/${_id}`} className="btn bg-[#2C3E50] text-white hover:text-black btn-sm md:btn-md rounded-full">Update</Link>
+            <button onClick={() => handleDelete(_id)} className="btn btn-error text-white  btn-sm md:btn-md rounded-full">Delete</button>
           </div>
         </div>
       </div>

@@ -48,7 +48,7 @@ const LoginPage = () => {
         <div className="flex flex-col lg:w-[35%] lg:flex-row items-center">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="card-body rounded-md lg:w-[50%] border"
+            className="card-body rounded-xl lg:w-[50%] border"
           >
             <h2 className="text-center text-2xl md:text-3xl font-bold">
               Login
@@ -60,7 +60,7 @@ const LoginPage = () => {
               <input
                 type="email"
                 placeholder="email"
-                className="input input-bordered rounded-md"
+                className="input input-bordered rounded-xl"
                 {...register("email", { required: true })}
               />
               {errors.email && (
@@ -71,7 +71,7 @@ const LoginPage = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <label className="input input-bordered rounded-md flex items-center gap-2">
+              <label className="input input-bordered rounded-xl flex items-center gap-2">
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="password"
@@ -96,21 +96,21 @@ const LoginPage = () => {
               )}
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#38B2AC] hover:text-black text-white rounded-md ">
+              <button className="btn bg-[#3498DB] text-white hover:text-black rounded-xl ">
                 Login
               </button>
             </div>
             <h2 className="text-center mt-2 font-medium">
               Not a Member Yet?{" "}
-              <Link to={"/register"} className="text-[#38B2AC] underline">
+              <Link to={"/register"} className="text-[#3498DB] underline">
                 Sign Up
               </Link>
             </h2>
             <p className="text-center mt-2 font-medium">Or Login with</p>
-            <div className="flex justify-between">
+            <div className="flex justify-center">
               <button
                   onClick={handlegoogle}
-                className="flex items-center gap-1 text-[#38B2AC] btn btn-sm rounded-none"
+                className="flex items-center gap-1 text-[#3498DB] btn btn-sm rounded-none"
               >
                 <FaGoogle />
                 Google

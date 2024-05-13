@@ -144,7 +144,7 @@ const UpdateBlog = () => {
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Update Changes</button>
+              <button className="btn bg-[#3498DB] text-white hover:text-black">Update Changes</button>
             </div>
           </form>
         </div>

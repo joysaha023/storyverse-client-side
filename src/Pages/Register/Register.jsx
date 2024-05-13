@@ -66,7 +66,7 @@ const Register = () => {
         <div className="flex flex-col lg:w-[35%] lg:flex-row items-center">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="card-body lg:w-[30%] border rounded-md"
+            className="card-body lg:w-[30%] border rounded-xl"
           >
             <h2 className="text-center text-2xl md:text-3xl font-bold">
               Sign Up
@@ -78,7 +78,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="name"
-                className="input input-bordered rounded-md"
+                className="input input-bordered rounded-xl"
                 {...register("fullName", { required: true })}
               />
               {errors.fullName && (
@@ -92,7 +92,7 @@ const Register = () => {
               <input
                 type="email"
                 placeholder="email"
-                className="input input-bordered rounded-md"
+                className="input input-bordered rounded-xl"
                 {...register("email", { required: true })}
               />
               {errors.email && (
@@ -106,7 +106,7 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="photo url"
-                className="input input-bordered rounded-md"
+                className="input input-bordered rounded-xl"
                 {...register("image")}
               />
             </div>
@@ -114,7 +114,7 @@ const Register = () => {
               <label className="label">
                 <span className="label-text">Password</span>
               </label>
-              <label className="input input-bordered rounded-md flex items-center gap-2">
+              <label className="input input-bordered rounded-xl flex items-center gap-2">
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="password"
@@ -137,13 +137,13 @@ const Register = () => {
               )}
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#38B2AC] text-white hover:text-black rounded-md ">
+              <button className="btn bg-[#3498DB] text-white hover:text-black rounded-xl ">
                 Register
               </button>
             </div>
             <h2 className="text-center mt-2 font-medium">
               Already have an account?{" "}
-              <Link to={"/login"} className="text-[#38B2AC] underline">
+              <Link to={"/login"} className="text-[#3498DB] underline">
                 Login
               </Link>
             </h2>

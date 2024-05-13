@@ -13,7 +13,7 @@ const AddBlogs = () => {
         const short_description = form.sdescription.value;
         const long_description = form.ldescription.value;
         const email = form.email.value;
-        const profile_pic = form.ownerPhoto.value;
+        const profile_pic = user?.photoURL;
         const name = form.name.value;
         const sendBlog = {title, image_url, category, profile_pic, short_description, long_description, email, name}
 
@@ -91,7 +91,7 @@ const AddBlogs = () => {
             </label>
             <textarea className="textarea textarea-bordered" name="ldescription" placeholder="Long Description"></textarea>
           </div>
-          <div className="form-control">
+          {/* <div className="form-control">
             <label className="label">
               <span className="label-text">Owner Photo</span>
             </label>
@@ -102,7 +102,7 @@ const AddBlogs = () => {
               className="input input-bordered"
               required
             />
-          </div>
+          </div> */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Name</span>
@@ -128,7 +128,7 @@ const AddBlogs = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Submit</button>
+            <button className="btn bg-[#3498DB] text-white hover:text-black">Add Blog</button>
           </div>
         </form>
       </div>

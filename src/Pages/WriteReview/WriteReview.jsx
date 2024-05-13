@@ -28,7 +28,7 @@ const WriteReview = () => {
 
     return (
         <div className='max-w-6xl mx-auto'>
-            <h2 className='text-center'>Write Review</h2>
+            <h2 className='text-center text-2xl font-bold my-4'>Write Review</h2>
              <form onSubmit={handleSubmit} className="card-body border rounded-md">
           <div className="form-control">
             <label className="label">
@@ -83,7 +83,7 @@ const WriteReview = () => {
             <textarea className="textarea textarea-bordered" name="sdescription" placeholder="Write Review" required></textarea>
           </div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Submit</button>
+            <button className="btn bg-[#3498DB] text-white hover:text-black">Submit</button>
           </div>
         </form>
         </div>

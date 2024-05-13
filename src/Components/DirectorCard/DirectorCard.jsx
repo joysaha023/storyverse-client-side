@@ -13,7 +13,7 @@ const DirectorCard = ({ item }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
-          <p>Oscar Won: {oscars_won}</p>
+          <p><span className="font-medium">Oscar Won:</span> {oscars_won}</p>
           <div className="card-actions items-center justify-end">
             <Link to={`/moviedata/${name}`} className="btn bg-[#3498DB] btn-sm md:btn-md text-white hover:text-black  rounded-full">
               View Movie List
