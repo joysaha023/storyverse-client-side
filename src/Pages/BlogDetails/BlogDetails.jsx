@@ -19,18 +19,21 @@ const BlogDetails = () => {
       });
   }, [id]);
 
+  function commentSubmit() {}
+
   useEffect(() => {
     fetch(`http://localhost:5000/comments/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setControl(!control);
+        setComments(data)
       });
-  }, [id]);
+  }, [id, commentSubmit]);
 
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    commentSubmit()
     const form = e.target;
     const coment = form.comment.value;
     const blogid = item._id;
