@@ -16,7 +16,7 @@ const Navbar = () => {
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#3498DB] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -28,7 +28,7 @@ const Navbar = () => {
           to={"/allblogs"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#3498DB] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -40,7 +40,7 @@ const Navbar = () => {
           to={"/featuredblogs"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#3498DB] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -52,7 +52,7 @@ const Navbar = () => {
           to={"/wishlist"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#3498DB] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -64,7 +64,7 @@ const Navbar = () => {
           to={"/addblogs"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#3498DB] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -87,7 +87,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar border bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -108,13 +108,13 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navlink}
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost hover:bg-white text-xl">
-          StoryVerse
+        <Link to={"/"} className="btn btn-ghost gap-0 font-bold hover:bg-white text-2xl">
+          Story<span className="text-[#3498DB]">Verse</span>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -122,7 +122,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="flex items-center">
+          <div className="flex md:gap-2 items-center">
             <button className="btn btn-ghost btn-circle">
               <div className="dropdown dropdown-end">
                 <div
@@ -156,16 +156,16 @@ const Navbar = () => {
                 </ul>
               </div>
             </button>
-            <button onClick={handlelogout} className="btn btn-error">
+            <button onClick={handlelogout} className="btn btn-sm md:btn-md text-white rounded-full btn-error">
               Log Out
             </button>
           </div>
         ) : (
-          <div className="flex ">
-            <Link to={"/login"} className="btn btn-sm lg:btn-md btn-primary">
+          <div className="flex gap-2">
+            <Link to={"/login"} className="btn btn-sm lg:btn-md rounded-full text-white bg-[#3498DB] hover:text-black">
               Login
             </Link>
-            <Link to={"/register"} className="btn hidden md:flex btn-accent">
+            <Link to={"/register"} className="btn hidden md:flex rounded-full text-white bg-[#2C3E50] hover:text-black">
               Register
             </Link>
           </div>
