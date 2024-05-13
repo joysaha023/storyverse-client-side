@@ -5,7 +5,7 @@ const SingleMovie = ({ item }) => {
   const { title, image, rating, category, year } = item;
   return (
     <div>
-      <div className="card h-full md:card-side bg-base-100 shadow-xl">
+      <div className="card h-full  md:card-side bg-base-100 shadow-xl">
         <figure>
           <img
             className=" md:h-[102px] md:w-[68px] m-4 rounded-md"

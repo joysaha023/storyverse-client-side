@@ -12,7 +12,7 @@ const MyblogCard = ({data, handleDelete}) => {
 
     return (
         <div>
-      <div className="card w-full h-full bg-[#ECF0F1] shadow-xl">
+      <div className="card w-full h-full bg-[#ECF0F1] ">
         <figure>
           <img
             src={image_url}

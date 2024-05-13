@@ -26,6 +26,7 @@ const FamousDirector = () => {
     //     <span className="loading  loading-spinner loading-lg"></span>
     //   </div>)
     // }
+    // console.log(users)
 
     
 
