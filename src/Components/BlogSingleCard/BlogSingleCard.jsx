@@ -18,8 +18,8 @@ const BlogSingleCard = ({item}) => {
           <span>{category}</span>
           <p>{short_description}</p>
           <div className="card-actions items-center justify-between">
-            <button className="btn btn-accent btn-sm rounded-2xl">WishList</button>
-            <Link to={`/BlogDetails/${_id}`} className="btn btn-primary btn-sm rounded-2xl">Read More</Link>
+            <button className="btn bg-[#2C3E50] text-white hover:text-black btn-md rounded-full">WishList</button>
+            <Link to={`/BlogDetails/${_id}`} className="btn bg-[#3498DB] text-white hover:text-black btn-md rounded-full">Read More</Link>
           </div>
         </div>
       </div>

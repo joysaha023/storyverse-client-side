@@ -58,7 +58,7 @@ const AllBlogs = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <div className="flex justify-center items-center gap-6">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-2 mt-2 lg:gap-6">
         <div>
           <select
             onChange={(e) => setFilter(e.target.value)}
@@ -84,21 +84,21 @@ const AllBlogs = () => {
                 onChange={e => setSearchText(e.target.value)}
                 value={searchText}
                 name='search'
-                placeholder='Enter Job Title'
+                placeholder='Enter Blog Title'
                 aria-label='Enter Job Title'
               />
 
-              <button className='px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none'>
+              <button className='px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-white uppercase transition-colors duration-300 transform bg-[#3498DB] rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none'>
                 Search
               </button>
             </div>
           </form>
         </div>
-        <button onClick={handleReset} className='btn'>
+        <button onClick={handleReset} className='btn bg-[#2C3E50] text-white hover:text-black'>
             Reset
           </button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2 gap-5 mt-3 lg:mt-6">
         {data.map((item) => (
           <BlogSingleCard key={item._id} item={item}></BlogSingleCard>
         ))}

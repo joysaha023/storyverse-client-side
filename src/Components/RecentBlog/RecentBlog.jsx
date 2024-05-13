@@ -32,7 +32,7 @@ const RecentBlog = () => {
                 }
             </div>
             <div className='my-6 text-center'>
-                <Link to={"/allblogs"} className='btn btn-accent'>All Blogs</Link>
+                <Link to={"/allblogs"} className='btn rounded-xl bg-[#2C3E50] text-white hover:text-black'>All Blogs</Link>
             </div>
         </div>
     );

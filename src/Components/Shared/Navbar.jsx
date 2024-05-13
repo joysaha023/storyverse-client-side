@@ -113,7 +113,7 @@ const Navbar = () => {
             {navlink}
           </ul>
         </div>
-        <Link to={"/"} className="btn btn-ghost gap-0 font-bold hover:bg-white text-2xl">
+        <Link to={"/"} className="btn btn-ghost gap-0 font-bold hover:bg-white text-lg md:text-2xl">
           Story<span className="text-[#3498DB]">Verse</span>
         </Link>
       </div>
