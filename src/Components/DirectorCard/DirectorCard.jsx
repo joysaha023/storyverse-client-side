@@ -7,7 +7,7 @@ const DirectorCard = ({ item }) => {
 
   return (
     <div>
-      <div className="card w-full h-full bg-base-100 shadow-xl">
+      <div className="card w-full h-full bg-[#ECF0F1] ">
         <figure className="p-4">
           <img className="rounded-md" src={image} alt="Shoes" />
         </figure>

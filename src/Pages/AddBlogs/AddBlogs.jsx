@@ -36,7 +36,7 @@ const AddBlogs = () => {
     <div className="max-w-6xl mx-auto">
       <h2>AddBlogs </h2>
       <div>
-        <form onSubmit={handleSubmit} className="card-body border rounded-md">
+        <form onSubmit={handleSubmit} className="card-body bg-[#ECF0F1] border rounded-md">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Title</span>

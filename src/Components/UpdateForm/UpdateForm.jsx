@@ -11,7 +11,7 @@ const { title, image_url,  category, long_description, short_description} = item
     return (
         <div>
             <div>
-        <form  className="card-body border rounded-md">
+        <form  className="card-body border bg-[#ECF0F1] rounded-md">
           <div className="form-control">
             <label className="label">
               <span className="label-text">Title</span>

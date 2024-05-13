@@ -53,7 +53,7 @@ const UpdateBlog = () => {
       <h2>Update blog</h2>
       <div>
         <div>
-          <form onSubmit={handleUpdate} className="card-body border rounded-md">
+          <form onSubmit={handleUpdate} className="card-body bg-[#ECF0F1] border rounded-md">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Title</span>
