@@ -58,6 +58,7 @@ const AllBlogs = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+      <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">All Blogs Items</h2>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-2 mt-2 lg:gap-6">
         <div>
           <select

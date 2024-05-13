@@ -43,7 +43,7 @@ const AddBlogs = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h2>AddBlogs </h2>
+       <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">Add Blog</h2>
       <div>
         <form onSubmit={handleSubmit} className="card-body bg-[#ECF0F1] border rounded-md">
           <div className="form-control">

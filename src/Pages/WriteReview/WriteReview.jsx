@@ -40,7 +40,7 @@ const WriteReview = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h2 className="text-center text-2xl font-bold my-4">Write Review</h2>
+       <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">Write Review</h2>
       <form
         onSubmit={handleSubmit}
         className="card-body bg-[#ECF0F1]  border rounded-md"

@@ -5,6 +5,7 @@ const SeeAllReview = ({ item }) => {
   return (
     <div>
       <div className="card w-full h-full bg-[#ECF0F1] border">
+        
         <div className="card-body items-center text-center">
           <div className="avatar">
             <div className="w-24 rounded-full">

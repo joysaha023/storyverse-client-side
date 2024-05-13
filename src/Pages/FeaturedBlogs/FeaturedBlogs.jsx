@@ -56,9 +56,12 @@ const FeaturedBlogs = () => {
  
 
   return (
-    <div className="m-6 border-2 rounded-md">
+   <div className="max-w-6xl mx-auto">
+    <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">Top 10 Blogs</h2>
+     <div className="m-6 border-2 rounded-md">
       <DataTable columns={column} data={data}></DataTable>
     </div>
+   </div>
   );
 };
 
