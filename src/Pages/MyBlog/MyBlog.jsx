@@ -49,7 +49,7 @@ const handleDelete = (id) => {
 
     return (
         <div className='max-w-6xl mx-auto'>
-            <h2>My Blog</h2>
+            <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">My Blogs</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-3 gap-5">
                 {
                     item.map(data => <MyblogCard key={data._id} data={data} handleDelete={handleDelete}></MyblogCard>)
