@@ -3,6 +3,7 @@ import { json, useNavigate, useParams } from "react-router-dom";
 
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const UpdateBlog = () => {
   const { user } = useAuth();
@@ -59,6 +60,9 @@ const UpdateBlog = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - Update Blog</title>
+      </Helmet>
       <h2>Update blog</h2>
       <div>
         <div>

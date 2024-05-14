@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet";
 
 const WriteReview = () => {
   const {user} = useAuth();
@@ -40,6 +41,9 @@ const WriteReview = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - Write Review</title>
+      </Helmet>
        <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">Write Review</h2>
       <form
         onSubmit={handleSubmit}

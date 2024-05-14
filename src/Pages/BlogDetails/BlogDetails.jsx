@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import CardComments from "../../Components/CardComments/CardComments";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const BlogDetails = () => {
   const { user } = useAuth();
@@ -67,6 +68,9 @@ const BlogDetails = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - Blog Details</title>
+      </Helmet>
       <div className="card my-5 w-full rounded-none bg-base-100 shadow-none  ">
         <figure>
           <img src={item.image_url} alt="Shoes" />

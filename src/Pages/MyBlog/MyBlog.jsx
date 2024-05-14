@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
 import MyblogCard from '../../Components/MyblogCard/MyblogCard';
 import Swal from 'sweetalert2';
+import { Helmet } from 'react-helmet';
 
 
 const MyBlog = () => {
@@ -49,6 +50,9 @@ const handleDelete = (id) => {
 
     return (
         <div className='max-w-6xl mx-auto'>
+           <Helmet>
+        <title>StoryVerse - My Blogs</title>
+      </Helmet>
             <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">My Blogs</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 p-2 lg:grid-cols-3 gap-5">
                 {

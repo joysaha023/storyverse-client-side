@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const {createuser, logOut, updateuserProfile} = useAuth();
@@ -88,6 +89,9 @@ const Register = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - Register </title>
+      </Helmet>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
         <div className="lg:w-[50%]"><Lottie animationData={registration} /></div>
         <div className="flex flex-col lg:w-[35%] lg:flex-row items-center">

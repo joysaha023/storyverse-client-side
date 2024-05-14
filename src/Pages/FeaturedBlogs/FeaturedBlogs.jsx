@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import DataTable from "react-data-table-component";
+import { Helmet } from "react-helmet";
 
 
 const column = [
@@ -57,6 +58,9 @@ const FeaturedBlogs = () => {
 
   return (
    <div className="max-w-6xl mx-auto">
+     <Helmet>
+        <title>StoryVerse - Featured Blog</title>
+      </Helmet>
     <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">Top 10 Blogs</h2>
      <div className="m-6 border-2 rounded-md">
       <DataTable columns={column} data={data}></DataTable>

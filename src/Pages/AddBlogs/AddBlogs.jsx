@@ -2,6 +2,7 @@ import React from "react";
 import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const AddBlogs = () => {
     const {user} = useAuth();
@@ -43,6 +44,9 @@ const AddBlogs = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - Add Blog</title>
+      </Helmet>
        <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">Add Blog</h2>
       <div>
         <form onSubmit={handleSubmit} className="card-body bg-[#ECF0F1] border rounded-md">

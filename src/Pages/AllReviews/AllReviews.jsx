@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import SeeAllReview from "../../Components/SeeAllReview/SeeAllReview";
+import { Helmet } from "react-helmet";
 
 const AllReviews = () => {
   const { isPending, data: users } = useQuery({
@@ -21,6 +22,9 @@ const AllReviews = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - All Reviews</title>
+      </Helmet>
       <div>
         <h2 className="text-xl md:text-3xl text-center my-1 md:my-4 font-bold">
           All Reviews Here

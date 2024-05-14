@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 
 const LoginPage = () => {
     const {signIn, googleSignIn} = useAuth()
@@ -81,6 +82,9 @@ const LoginPage = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>StoryVerse - Login </title>
+      </Helmet>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
         <div className="lg:w-[50%]"><Lottie animationData={login} /></div>
         <div className="flex flex-col lg:w-[35%] lg:flex-row items-center">
