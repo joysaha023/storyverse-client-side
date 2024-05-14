@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
+import { FaHeart } from "react-icons/fa";
 
 const BlogSingleCard = ({ item }) => {
   const { user } = useAuth();
@@ -51,7 +52,7 @@ const BlogSingleCard = ({ item }) => {
             <button
               onClick={handlewish}
               className="btn bg-[#2C3E50] text-white hover:text-black btn-sm md:btn-md rounded-full"
-            >
+            ><FaHeart/>
               WishList
             </button>
             <Link

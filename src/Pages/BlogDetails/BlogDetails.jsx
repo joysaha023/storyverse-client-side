@@ -8,6 +8,7 @@ const BlogDetails = () => {
   const { user } = useAuth();
   const [item, setItems] = useState({});
   const [comments, setComments] = useState([]);
+  const [inputText, setInputText] = useState('')
   const { id } = useParams();
 
   useEffect(() => {
@@ -28,15 +29,21 @@ const BlogDetails = () => {
       });
   }, [id, commentSubmit]);
 
+  function handleCommentchanged(e) {
+    setInputText(e.target.value)
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     commentSubmit();
     const form = e.target;
-    const coment = form.comment.value;
+    const coment = inputText;
     const blogid = item._id;
     const userName = user?.displayName;
     const userimg = user?.photoURL;
     const commentData = { coment, blogid, userName, userimg };
+    
+    setInputText('')
 
     fetch("http://localhost:5000/commentpost", {
       method: "POST",
@@ -53,7 +60,9 @@ const BlogDetails = () => {
           icon: "success",
         });
         console.log(data);
+
       });
+    
   };
 
   return (
@@ -93,6 +102,8 @@ const BlogDetails = () => {
           <label className="flex flex-col md:flex-row  mt-8 w-full md:w-3/5  gap-2">
             <textarea
               name="comment"
+              onChange={handleCommentchanged}
+              value={inputText}
               className="textarea w-full textarea-bordered"
               placeholder={
                 user.email === item.email

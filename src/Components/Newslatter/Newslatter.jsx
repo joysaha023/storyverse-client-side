@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 
 const Newslatter = () => {
+  const [inputText, setInputText] = useState('');
 
+  function handleNewsClr(e) {
+    setInputText(e.target.value)
+  }
 
   const handleSub = () => {
-    
-    Swal.fire({
-      title: "Thank You for Subscribe",
-      text: "Your will get news on gmail.",
-      icon: "success",
-    });
+    setInputText('')
+    toast.success("Thanks to subscribe us!")
   }
 
   return (
@@ -23,6 +24,8 @@ const Newslatter = () => {
         <label className="flex flex-col md:flex-row items-center mt-8 w-full md:w-2/5 mx-auto gap-2">
           <input
             type="email"
+            onChange={handleNewsClr}
+            value={inputText}
             placeholder="write email here"
             className="input input-bordered rounded-xl  w-full max-w-xs"
           />
