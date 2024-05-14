@@ -65,7 +65,7 @@ const LoginPage = () => {
       navigate(location?.state ? location.state: '/');
     } catch (err) {
       // console.log(err)
-      toast.error(err?.message)
+      toast.warn("Please try again")
     }
   }
 

@@ -7,7 +7,7 @@ import { FaHeart } from "react-icons/fa";
 
 const BlogSingleCard = ({ item }) => {
   const { user } = useAuth();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { _id, title, image_url, category, short_description } = item;
 
   const handlewish = () => {
