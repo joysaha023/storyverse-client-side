@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
@@ -7,9 +7,15 @@ import { FaHeart } from "react-icons/fa";
 
 const BlogSingleCard = ({ item }) => {
   const { user } = useAuth();
+  const navigate = useNavigate();
   const { _id, title, image_url, category, short_description } = item;
 
   const handlewish = () => {
+
+    if(!user){
+      return toast.warn("Please Login")
+    }
+
     const blogid = _id;
     const titlee = title;
     const image = image_url;
@@ -50,7 +56,7 @@ const BlogSingleCard = ({ item }) => {
           <p>{short_description}</p>
           <div className="card-actions items-center justify-between">
             <button
-              onClick={handlewish}
+            onClick={handlewish}
               className="btn bg-[#2C3E50] text-white hover:text-black btn-sm md:btn-md rounded-full"
             ><FaHeart/>
               WishList
