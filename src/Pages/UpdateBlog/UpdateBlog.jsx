@@ -11,7 +11,7 @@ const UpdateBlog = () => {
   const [update, setUpdate] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/updateblog/${id}`)
+    fetch(`https://storyverse-website-server-side.vercel.app/updateblog/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUpdate(data);
@@ -37,9 +37,9 @@ const UpdateBlog = () => {
       email,
       name,
     };
-    console.log(updateBlog);
+    // console.log(updateBlog);
 
-    fetch(`http://localhost:5000/updateChanges/${id}`, {
+    fetch(`https://storyverse-website-server-side.vercel.app/updateChanges/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updateBlog),
@@ -53,7 +53,7 @@ const UpdateBlog = () => {
           icon: "success",
         });
         navigate("/myblog");
-        console.log(data);
+        // console.log(data);
       });
   };
 

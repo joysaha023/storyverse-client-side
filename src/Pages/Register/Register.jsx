@@ -54,7 +54,7 @@ const Register = () => {
       //     // Optimistic UI Update
       //     setUser({ ...result?.user, photoURL: image, displayName: fullName })
       //     const { data } = await axios.post(
-      //       `http://localhost:5000/jwt`,
+      //       `https://storyverse-website-server-side.vercel.app/jwt`,
       //       {
       //         email: result?.user?.email,
       //       },

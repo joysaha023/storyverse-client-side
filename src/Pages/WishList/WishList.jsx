@@ -8,7 +8,7 @@ const WishList = () => {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/wishlist/${user?.email}`, {credentials: 'include'})
+    fetch(`https://storyverse-website-server-side.vercel.app/wishlist/${user?.email}`, {credentials: 'include'})
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
@@ -16,7 +16,7 @@ const WishList = () => {
   }, [user]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/wishdelete/${id}`, {
+    fetch(`https://storyverse-website-server-side.vercel.app/wishdelete/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

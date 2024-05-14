@@ -12,7 +12,7 @@ const BlogDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogdetails/${id}`)
+    fetch(`https://storyverse-website-server-side.vercel.app/blogdetails/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -22,7 +22,7 @@ const BlogDetails = () => {
   function commentSubmit() {}
 
   useEffect(() => {
-    fetch(`http://localhost:5000/comments/${id}`)
+    fetch(`https://storyverse-website-server-side.vercel.app/comments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setComments(data);
@@ -45,7 +45,7 @@ const BlogDetails = () => {
     
     setInputText('')
 
-    fetch("http://localhost:5000/commentpost", {
+    fetch("https://storyverse-website-server-side.vercel.app/commentpost", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -59,7 +59,7 @@ const BlogDetails = () => {
           text: "Your comment is valuable for us.",
           icon: "success",
         });
-        console.log(data);
+        // console.log(data);
 
       });
     

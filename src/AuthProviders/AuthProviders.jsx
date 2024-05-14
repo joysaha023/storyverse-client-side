@@ -30,8 +30,8 @@ const AuthProviders = ({children}) => {
 
     const logOut = async () => {
         setLoading(true);
-        const {data} =  await axios("http://localhost:5000/logout", {withCredentials: true})
-        console.log(data)
+        const {data} =  await axios("https://storyverse-website-server-side.vercel.app/logout", {withCredentials: true})
+        // console.log(data)
         return signOut(auth)
     }
 

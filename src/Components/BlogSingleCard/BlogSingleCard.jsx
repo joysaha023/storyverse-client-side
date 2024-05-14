@@ -17,9 +17,9 @@ const BlogSingleCard = ({ item }) => {
     const cateegory = category;
     const useremail = user?.email;
     const wishData = { blogid, useremail, titlee, image, shortdescription, cateegory };
-    console.log(wishData);
+    // console.log(wishData);
 
-    fetch("http://localhost:5000/wishlistpost", {
+    fetch("https://storyverse-website-server-side.vercel.app/wishlistpost", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -29,7 +29,7 @@ const BlogSingleCard = ({ item }) => {
       .then((res) => res.json())
       .then((data) => {
         toast.success("Added to wishlist")
-        console.log(data);
+        // console.log(data);
       });
   };
 

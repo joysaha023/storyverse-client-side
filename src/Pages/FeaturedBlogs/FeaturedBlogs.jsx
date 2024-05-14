@@ -40,7 +40,7 @@ const FeaturedBlogs = () => {
   const { isPending, data } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:5000/featuredblog");
+      const res = await fetch("https://storyverse-website-server-side.vercel.app/featuredblog");
       return res.json();
     },
   });

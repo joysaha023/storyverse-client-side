@@ -7,7 +7,7 @@ const FanReview = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch("https://storyverse-website-server-side.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);
@@ -15,7 +15,7 @@ const FanReview = () => {
   // const {isPending, data: users} = useQuery({
   //     queryKey: ['users'],
   //     queryFn: async () => {
-  //         const res = await fetch('http://localhost:5000/review');
+  //         const res = await fetch('https://storyverse-website-server-side.vercel.app/review');
   //         return res.json();
   //     }
   // })

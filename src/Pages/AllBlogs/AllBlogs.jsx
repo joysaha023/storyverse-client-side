@@ -10,7 +10,7 @@ const AllBlogs = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/filter-blog?filter=${filter}&search=${search}`)
+    fetch(`https://storyverse-website-server-side.vercel.app/filter-blog?filter=${filter}&search=${search}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -19,7 +19,7 @@ const AllBlogs = () => {
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogposts`)
+    fetch(`https://storyverse-website-server-side.vercel.app/blogposts`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -43,7 +43,7 @@ const AllBlogs = () => {
   // const { isPending, data: users } = useQuery({
   //   queryKey: ["users"],
   //   queryFn: async () => {
-  //     const res = await fetch("http://localhost:5000/blogposts");
+  //     const res = await fetch("https://storyverse-website-server-side.vercel.app/blogposts");
   //     return res.json();
   //   },
   // });

@@ -6,7 +6,7 @@ const FamousDirector = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/director`)
+        fetch(`https://storyverse-website-server-side.vercel.app/director`)
           .then((res) => res.json())
           .then((data) => {
             setData(data);
@@ -16,7 +16,7 @@ const FamousDirector = () => {
     // const {isPending, data: users} = useQuery({
     //     queryKey: ['users'],
     //     queryFn: async () => {
-    //         const res = await fetch('http://localhost:5000/director');
+    //         const res = await fetch('https://storyverse-website-server-side.vercel.app/director');
     //         return res.json();
     //     }
     // })

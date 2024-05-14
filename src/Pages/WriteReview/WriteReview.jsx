@@ -17,9 +17,9 @@ const WriteReview = () => {
     const rating = form.rating.value;
     const review = form.sdescription.value;
     const writereview = { name, image, rating, review };
-    console.log(writereview);
+    // console.log(writereview);
 
-    fetch("http://localhost:5000/writereview", {
+    fetch("https://storyverse-website-server-side.vercel.app/writereview", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -34,7 +34,7 @@ const WriteReview = () => {
           icon: "success",
         });
         navigate("/allreviews")
-        console.log(data);
+        // console.log(data);
       });
   };
 

@@ -25,16 +25,16 @@ const LoginPage = () => {
     //sign in 
     try {
       const result = await signIn(email, password)
-      const {data} = await axios.post(`http://localhost:5000/jwt`, {
+      const {data} = await axios.post(`https://storyverse-website-server-side.vercel.app/jwt`, {
         email: result?.user?.email,
       }, {
         withCredentials: true
       })
-      console.log(data)
+      // console.log(data)
       toast.success("Login Successfully")
       navigate(location?.state ? location.state: '/');
     } catch(err){
-      console.log(err) 
+      // console.log(err) 
       toast.warning("incorrect password")
     }
 
@@ -55,16 +55,16 @@ const LoginPage = () => {
   const handlegoogle = async () => {
     try {
       const result = await googleSignIn()
-      const {data} = await axios.post(`http://localhost:5000/jwt`, {
+      const {data} = await axios.post(`https://storyverse-website-server-side.vercel.app/jwt`, {
         email: result?.user?.email,
       }, {
         withCredentials: true
       })
-      console.log(data)
+      // console.log(data)
       toast.success("Login Successfully")
       navigate(location?.state ? location.state: '/');
     } catch (err) {
-      console.log(err)
+      // console.log(err)
       toast.error(err?.message)
     }
   }

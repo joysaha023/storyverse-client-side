@@ -21,7 +21,7 @@ const AddBlogs = () => {
         const sendBlog = {title, image_url, category, profile_pic, short_description, long_description, email, name}
 
 
-        fetch("http://localhost:5000/blogposts", {
+        fetch("https://storyverse-website-server-side.vercel.app/blogposts", {
             method: "POST",
             headers: {
                 "content-type" : "application/json",
@@ -36,7 +36,7 @@ const AddBlogs = () => {
             icon: "success",
           });
           navigate("/myblog")
-            console.log(data)
+            // console.log(data)
         })
     }
 

@@ -9,7 +9,7 @@ const {user} = useAuth();
 const [item, setItems] = useState([]);
 
 useEffect(()=> {
-    fetch(`http://localhost:5000/myblog/${user?.email}`, {credentials: 'include'})
+    fetch(`https://storyverse-website-server-side.vercel.app/myblog/${user?.email}`, {credentials: 'include'})
     .then((res) => res.json())
     .then((data) => {
         setItems(data)
@@ -28,7 +28,7 @@ const handleDelete = (id) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://storyverse-website-server-side.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

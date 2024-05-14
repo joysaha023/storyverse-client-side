@@ -9,7 +9,7 @@ const MovieData = () => {
   const [data, setData] = useState([]);
  
   useEffect(() => {
-    fetch(`http://localhost:5000/moviedb/${category}`)
+    fetch(`https://storyverse-website-server-side.vercel.app/moviedb/${category}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
