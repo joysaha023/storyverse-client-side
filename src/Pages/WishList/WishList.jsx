@@ -8,7 +8,7 @@ const WishList = () => {
   const [item, setItem] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/wishlist/${user?.email}`)
+    fetch(`http://localhost:5000/wishlist/${user?.email}`, {credentials: 'include'})
       .then((res) => res.json())
       .then((data) => {
         setItem(data);

@@ -9,7 +9,7 @@ const {user} = useAuth();
 const [item, setItems] = useState([]);
 
 useEffect(()=> {
-    fetch(`http://localhost:5000/myblog/${user?.email}`)
+    fetch(`http://localhost:5000/myblog/${user?.email}`, {credentials: 'include'})
     .then((res) => res.json())
     .then((data) => {
         setItems(data)

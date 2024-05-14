@@ -21,7 +21,7 @@ const Register = () => {
       } = useForm();
 
 
-      const onSubmit = (data) => {
+      const onSubmit = async (data) => {
         const { fullName, email, image, password } = data;
      
         setPasswordError("");
@@ -45,6 +45,32 @@ const Register = () => {
        
         
         // create user
+
+      //   try {
+      //     //2. User Registration
+      //     const result = await createuser(email, password)
+    
+      //     await updateuserProfile(fullName, image)
+      //     // Optimistic UI Update
+      //     setUser({ ...result?.user, photoURL: image, displayName: fullName })
+      //     const { data } = await axios.post(
+      //       `http://localhost:5000/jwt`,
+      //       {
+      //         email: result?.user?.email,
+      //       },
+      //       { withCredentials: true }
+      //     )
+      //     console.log(data)
+      //     navigate(location?.state ? location.state: '/');
+      //     toast.success("Registration Successfully")
+      //   } catch (err) {
+      //     console.log(err)
+      //     toast.error("Email is already exist")
+      //   }
+      // }
+
+
+
         createuser(email, password)
           .then((result) => {
             updateuserProfile(fullName, image)

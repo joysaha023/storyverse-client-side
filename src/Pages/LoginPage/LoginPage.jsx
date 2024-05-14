@@ -6,6 +6,7 @@ import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const LoginPage = () => {
     const {signIn, googleSignIn} = useAuth()
@@ -19,30 +20,64 @@ const LoginPage = () => {
   } = useForm();
 
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const {email, password} = data;
-   
     //sign in 
-    signIn(email, password)
-    .then(result => {
-     console.log(result.user)
-     toast.success("Login Successfully")
-     navigate(location?.state ? location.state: '/');
-    })
-    .catch(error => {
+    try {
+      const result = await signIn(email, password)
+      const {data} = await axios.post(`http://localhost:5000/jwt`, {
+        email: result?.user?.email,
+      }, {
+        withCredentials: true
+      })
+      console.log(data)
+      toast.success("Login Successfully")
+      navigate(location?.state ? location.state: '/');
+    } catch(err){
+      console.log(err) 
       toast.warning("incorrect password")
-    })
+    }
+
+
+
+
+    // signIn(email, password)
+    // .then(result => {
+    //  console.log(result.user)
+    //  toast.success("Login Successfully")
+    //  navigate(location?.state ? location.state: '/');
+    // })
+    // .catch(error => {
+    //   toast.warning("incorrect password")
+    // })
   };
 
-  const handlegoogle = () => {
-    googleSignIn()
-    .then(result => {
-        console.log(result.user)
-        toast.success("Login Successfully")
-        navigate(location?.state ? location.state: '/');
-    })
-    .catch()
+  const handlegoogle = async () => {
+    try {
+      const result = await googleSignIn()
+      const {data} = await axios.post(`http://localhost:5000/jwt`, {
+        email: result?.user?.email,
+      }, {
+        withCredentials: true
+      })
+      console.log(data)
+      toast.success("Login Successfully")
+      navigate(location?.state ? location.state: '/');
+    } catch (err) {
+      console.log(err)
+      toast.error(err?.message)
+    }
   }
+
+  // const handlegoogle = () => {
+  //   googleSignIn()
+  //   .then(result => {
+  //       console.log(result.user)
+  //       toast.success("Login Successfully")
+  //       navigate(location?.state ? location.state: '/');
+  //   })
+  //   .catch()
+  // }
 
   return (
     <div className="max-w-6xl mx-auto">

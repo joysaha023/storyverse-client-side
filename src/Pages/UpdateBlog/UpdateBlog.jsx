@@ -43,6 +43,7 @@ const UpdateBlog = () => {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(updateBlog),
+      
     })
       .then((res) => res.json())
       .then((data) => {
