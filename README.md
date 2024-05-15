@@ -34,5 +34,6 @@ Live Site URL: [StoryVerse](https://storyverse-blogsite.web.app/)
 - Navbar with link are only 3 sections are public home, all blog, and featured blog these section public for all.
 - Slider with some action movie poster which most popular in the world wide added this picture on slider for user satisfied.
 - Recent Blog section which have some sort listed blog blog of all blog recently added blog on this section
--
-
+- Famous Director section this section we listed world famous director which movie is most popular some director are won oscar and we listed the director some famous and oscar movie on list
+- Our Fan Reviews these section is all about our blog site users which satisfied to read our blog and give review with rating in our blog site.
+- Footer this footer section is shown only blog site name and social media link 
