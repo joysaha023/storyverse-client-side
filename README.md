@@ -11,3 +11,9 @@ Live Site URL: [StoryVerse](https://storyverse-blogsite.web.app/)
 <a href="https://storyverse-blogsite.web.app">
   <img src="https://github.com/Porgramming-Hero-web-course/b9a11-client-side-joysaha023/blob/main/demo2.png" />
 </a>
+
+## Technology Used
+
+ - React, MongoDB, ExpressJs, Node JS,
+ - JWT, Tanstack Query, Firebase, JavaScript,
+ - Daisy Ui, Tailwind CSS, Axios 
