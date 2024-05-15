@@ -17,3 +17,22 @@ Live Site URL: [StoryVerse](https://storyverse-blogsite.web.app/)
  - React, MongoDB, ExpressJs, Node JS,
  - JWT, Tanstack Query, Firebase, JavaScript,
  - Daisy Ui, Tailwind CSS, Axios 
+
+
+## Key Features:
+### Introduction
+- Purpose: Create a user-friendly platform for Movie Lover blog site.
+- Scope: Features included user can added their blog and read blog and comment others blog.
+
+### User Authentication and Permissions
+- Registered User: Registered user access all features.
+- Non Registered User: Non Registered user can't access all features.
+- Registration Field: name, email, photoUrl, password. password is also verification added minimum 6 carectar required.
+- Login Field: user can login with registered email and password and also can signup google 
+
+### Home Page (public)
+- Navbar with link are only 3 sections are public home, all blog, and featured blog these section public for all.
+- Slider with some action movie poster which most popular in the world wide added this picture on slider for user satisfied.
+- Recent Blog section which have some sort listed blog blog of all blog recently added blog on this section
+-
+
