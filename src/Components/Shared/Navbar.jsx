@@ -87,6 +87,18 @@ const Navbar = () => {
          My Blogs
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to={"/community"}
+          className={({ isActive }) =>
+            isActive
+              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
+              : "font-medium"
+          }
+        >
+         Community
+        </NavLink>
+      </li>
     </>
   );
 

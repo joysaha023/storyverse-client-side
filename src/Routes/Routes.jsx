@@ -16,6 +16,7 @@ import UpdateBlog from "../Pages/UpdateBlog/UpdateBlog";
 import MovieData from "../Pages/MovieData/MovieData";
 import AllReviews from "../Pages/AllReviews/AllReviews";
 import WriteReview from "../Pages/WriteReview/WriteReview";
+import Community from "../Pages/Community/Community";
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
         {
           path: "/writereview",
           element: <PrivateRoutes><WriteReview></WriteReview></PrivateRoutes>
+        },
+        {
+          path: "/community",
+          element: <PrivateRoutes><Community></Community></PrivateRoutes>
         }
     ]
   },
