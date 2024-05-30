@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import useAuth from "../../Hooks/useAuth";
+import AddReply from "../AddReply/AddReply";
 
 const PostCard = ({ post }) => {
     const {user} = useAuth();
@@ -85,7 +86,7 @@ const PostCard = ({ post }) => {
             </label>
             <div>
                 {
-                    item.map((data) => )
+                    item.map((data) => <AddReply key={data._id} data={data}></AddReply>)
                 }
             </div>
           </div>
