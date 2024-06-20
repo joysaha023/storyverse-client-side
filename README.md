@@ -5,11 +5,11 @@ This website is very amazing for movie lover. who can know about movie and love 
 Live Site URL: [StoryVerse](https://storyverse-blogsite.web.app/)
 
 <a href="https://storyverse-blogsite.web.app">
-  <img src="https://github.com/Porgramming-Hero-web-course/b9a11-client-side-joysaha023/blob/main/demo1.png" />
+  <img src="https://github.com/joysaha023/storyverse-client-side/blob/main/demo1.png" />
 </a>
 
 <a href="https://storyverse-blogsite.web.app">
-  <img src="https://github.com/Porgramming-Hero-web-course/b9a11-client-side-joysaha023/blob/main/demo2.png" />
+  <img src="https://github.com/joysaha023/storyverse-client-side/blob/main/demo2.png" />
 </a>
 
 ## Technology Used
