@@ -34,8 +34,6 @@ Live Site URL: [StoryVerse](https://storyverse-blogsite.web.app/)
 - Navbar with link are only 3 sections are public home, all blog, and featured blog these section public for all.
 - Slider with some action movie poster which most popular in the world wide added this picture on slider for user satisfied.
 - Recent Blog section which have some sort listed blog blog of all blog recently added blog on this section
-- Famous Director section this section we listed world famous director which movie is most popular some director are won oscar and we listed the director some famous and oscar movie on list
-- Our Fan Reviews these section is all about our blog site users which satisfied to read our blog and give review with rating in our blog site.
 - NewsLetter section where user input email and submit he/she will get latest blog news in gmail.
 - Footer this footer section is shown only blog site name and social media link 
 
@@ -47,4 +45,4 @@ Live Site URL: [StoryVerse](https://storyverse-blogsite.web.app/)
 - copy my repo clone from my repository
 - and run this link on git clone command
 - install node packeage npm install
-- run this project on yout pc npm run dev command
+- run this project 
